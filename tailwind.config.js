@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      flexGrow:{
+        "2":"2",
+        "3":"3"
+      }
+
+    },
   },
   plugins: [],
 }

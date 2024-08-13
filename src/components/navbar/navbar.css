@@ -1,0 +1,89 @@
+.navbar{
+    @apply flex justify-between w-full  h-[100px] align-middle;
+}
+
+.logoContainer{
+    @apply flex gap-3 items-center
+}
+
+.appNameStyle{
+    @apply font-bold flex
+}
+
+.logo{
+    @apply rounded-full w-20 h-20  min-w-20 min-h-20
+}
+
+.left{
+    @apply flex gap-10 items-center flex-grow-3
+}
+
+.navitems{
+    @apply hidden sm:flex gap-3 text-sm sm:text-lg
+}
+
+.right{
+    @apply flex justify-center items-center gap-3  flex-grow-2
+}
+
+
+.signUpBtn{
+    @apply px-3 py-2 text-white bg-blue-600 rounded-md
+}
+
+.right-menu-btn{ 
+    @apply sm:hidden  flex justify-center items-center p-3 transition-all duration-500 hover:bg-gray-400 hover:rounded-full
+}
+
+.btns{
+    @apply hidden sm:flex items-center gap-3 
+}
+
+.right-menu-container {
+    @apply top-0 left-0 absolute w-full h-full bg-gray-600 bg-opacity-30;
+   
+}
+
+.right-menu {
+    transition: all 1s ease;
+    @apply absolute w-[300px] z-20 bg-black  h-screen  text-white right-[0%];
+}
+
+.right-menu-active{
+    transition: all 1s ease;
+    @apply absolute w-[300px] z-20 bg-black  h-screen  text-white right-[-100%];
+}
+
+.navitem-vertical{
+    @apply w-full h-full flex flex-col z-30 items-center  justify-center gap-5 text-xl text-white;
+}
+
+.close-btn{
+    @apply absolute top-10 right-10
+}
+
+.apply-animation-open {
+    animation: openAnimation 0.5s forwards;
+}
+
+.apply-animation-close {
+    animation: closeAnimation 0.5s forwards;
+}
+
+@keyframes openAnimation {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
