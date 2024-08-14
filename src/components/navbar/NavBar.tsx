@@ -3,26 +3,22 @@ import logo from "../../assets/youssef-booking-Nobg.png"
 import "./navbar.css"
 import { IoIosCloseCircleOutline, IoMdClose, IoMdMenu } from 'react-icons/io'
 import { navbarList } from '../../constant'
+import useNavBar from './useNavbar'
+import { Link } from 'react-router-dom'
 function NavBar() {
-
-    const [openSideMenu,setOpenSideMenu]=useState(false);
-
-    const handleOpenSideMenu=()=>{
-       setOpenSideMenu(prev=>!prev)
-       
-    }
+    const {openSideMenu,handleOpenSideMenu}=useNavBar();
 
 
   return (
     <nav className='navbar'>
         <div className='left'>
-            <a className='logoContainer'>
+            <Link to="/" className='logoContainer'>
                 <img src={logo} className='logo' alt=""/>
                 <span className='appNameStyle'>Youssef Booking</span>
-            </a>
+            </Link>
             <div className='navitems'>
                {navbarList.map((navElement,i)=>(
-                <a href="/" key={i}>{navElement}</a>
+                <Link to={navElement.link} key={i}>{navElement.name}</Link>
                ))}
             </div>
             
@@ -50,7 +46,7 @@ function NavBar() {
                 <span className="close-btn"  onClick={handleOpenSideMenu}><IoMdClose /></span>
                 <div className='navitem-vertical'>
                 {navbarList.map((navElement,i)=>(
-                <a href="/" key={i}>{navElement}</a>
+                <Link to={navElement.link} key={i}>{navElement.name}</Link>
                ))}
                 </div>
             </div>

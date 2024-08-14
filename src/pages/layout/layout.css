@@ -1,5 +1,5 @@
-/* .layout{
-    @apply xl:bg-purple-300 lg:bg-orange-300 md:bg-blue-300 bg-red-400;
+.layout{
+    /* @apply xl:bg-purple-300 lg:bg-orange-300 md:bg-blue-300 bg-red-400; */
     @apply xl:max-w-[1000px] lg:max-w-[700px] md:max-w-[600px];
     height: 100vh;
     max-width: 1066px;
@@ -7,4 +7,4 @@
     margin-right:auto;
     padding-left:20px;
     padding-right:20px;
-} */
+}

@@ -1,6 +1,6 @@
 export const navbarList=[
-    "Home",
-    "About",
-    "Contact",
-    "Agents"
+    {"name":"Home","link":"/"},
+    {"name":"About","link":"/About"},
+    {"name":"Contact","link":"/Contact"},
+    {"name":"Agents","link":"/Agents"},
     ]

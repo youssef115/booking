@@ -1,5 +1,5 @@
 .navbar{
-    @apply flex justify-between w-full  h-[100px] align-middle;
+    @apply  flex justify-between w-full  h-[100px] align-middle ;
 }
 
 .logoContainer{
